@@ -28,32 +28,32 @@ var lyr_perimetre_geoparc_04_1 = new ol.layer.Vector({
                 style: style_perimetre_geoparc_04_1,
                 popuplayertitle: "perimetre_geoparc_04",
                 interactive: true,
-                title: '<img src="styles/legend/perimetre_geoparc_04_1.png" /> perimetre_geoparc_04'
-            });
-var format_Classeur1_2 = new ol.format.GeoJSON();
-var features_Classeur1_2 = format_Classeur1_2.readFeatures(json_Classeur1_2, 
+                    title: '<img src="styles/legend/perimetre_geoparc_04_1.png" /> perimetre_geoparc_04'
+                });
+var format_site_2 = new ol.format.GeoJSON();
+var features_site_2 = format_site_2.readFeatures(json_site_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_Classeur1_2 = new ol.source.Vector({
+var jsonSource_site_2 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Classeur1_2.addFeatures(features_Classeur1_2);
-var lyr_Classeur1_2 = new ol.layer.Vector({
+jsonSource_site_2.addFeatures(features_site_2);
+var lyr_site_2 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_Classeur1_2, 
-                style: style_Classeur1_2,
-                popuplayertitle: "Classeur1",
+                source:jsonSource_site_2, 
+                style: style_site_2,
+                popuplayertitle: "site",
                 interactive: true,
-                title: '<img src="styles/legend/Classeur1_2.png" /> Classeur1'
-            });
+                    title: '<img src="styles/legend/site_2.png" /> site'
+                });
 
-lyr_Ortho50cm_0.setVisible(true);lyr_perimetre_geoparc_04_1.setVisible(true);lyr_Classeur1_2.setVisible(true);
-var layersList = [lyr_Ortho50cm_0,lyr_perimetre_geoparc_04_1,lyr_Classeur1_2];
+lyr_Ortho50cm_0.setVisible(true);lyr_perimetre_geoparc_04_1.setVisible(true);lyr_site_2.setVisible(true);
+var layersList = [lyr_Ortho50cm_0,lyr_perimetre_geoparc_04_1,lyr_site_2];
 lyr_perimetre_geoparc_04_1.set('fieldAliases', {'id': 'id', });
-lyr_Classeur1_2.set('fieldAliases', {'id': 'id', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'site a phtographier': 'site a phtographier', });
+lyr_site_2.set('fieldAliases', {'id': 'id', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'site a phtographier': 'site a phtographier', });
 lyr_perimetre_geoparc_04_1.set('fieldImages', {'id': 'TextEdit', });
-lyr_Classeur1_2.set('fieldImages', {'id': 'Range', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'site a phtographier': 'TextEdit', });
+lyr_site_2.set('fieldImages', {'id': 'Range', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'site a phtographier': 'TextEdit', });
 lyr_perimetre_geoparc_04_1.set('fieldLabels', {'id': 'hidden field', });
-lyr_Classeur1_2.set('fieldLabels', {'id': 'inline label - always visible', 'Latitude': 'hidden field', 'Longitude': 'hidden field', 'site a phtographier': 'inline label - always visible', });
-lyr_Classeur1_2.on('precompose', function(evt) {
+lyr_site_2.set('fieldLabels', {'id': 'inline label - always visible', 'Latitude': 'hidden field', 'Longitude': 'hidden field', 'site a phtographier': 'inline label - always visible', });
+lyr_site_2.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
